@@ -1,7 +1,7 @@
 {
   "games": [
     {
-      "id": 1,
+      "id": "1",
       "title": "The Elder Scrolls V: Skyrim",
       "year": 2011,
       "genre": "RPG",
@@ -12,7 +12,7 @@
       "multiplayer": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Counter-Strike 2",
       "year": 2023,
       "genre": "Shooter",
@@ -23,7 +23,7 @@
       "multiplayer": true
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "The Last Of Us",
       "year": 2013,
       "genre": "Adventure",
@@ -34,25 +34,24 @@
       "multiplayer": true
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Kenshi",
       "year": 2018,
       "genre": "RPG",
       "developer": "Lo-Fi Games",
       "platform": "PC",
       "status": "New",
-      "multiplayer": false,
-      "comment": "Прикольная выживалка в постапокалипсисе"
+      "multiplayer": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "GTA 5",
       "developer": "Rockstar Games",
       "status": "Done",
       "multiplayer": true
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Dark And Darker",
       "status": "New"
     }
