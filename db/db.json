@@ -1,3 +1,60 @@
 {
-  "records": []
+  "games": [
+    {
+      "id": 1,
+      "title": "The Elder Scrolls V: Skyrim",
+      "year": 2011,
+      "genre": "RPG",
+      "developer": "Bethesda Game Studios",
+      "publisher": "Bethesda Softworks",
+      "platform": "PC",
+      "status": "Done",
+      "multiplayer": false
+    },
+    {
+      "id": 2,
+      "title": "Counter-Strike 2",
+      "year": 2023,
+      "genre": "Shooter",
+      "developer": "Valve",
+      "publisher": "Valve",
+      "platform": "PC",
+      "status": "InProgress",
+      "multiplayer": true
+    },
+    {
+      "id": 3,
+      "title": "The Last Of Us",
+      "year": 2013,
+      "genre": "Adventure",
+      "developer": "Nauthy Dog",
+      "publisher": "Sony Computer Entertainment",
+      "platform": "PS4",
+      "status": "New",
+      "multiplayer": true
+    },
+    {
+      "id": 4,
+      "title": "Kenshi",
+      "year": 2018,
+      "genre": "RPG",
+      "developer": "Lo-Fi Games",
+      "platform": "PC",
+      "status": "New",
+      "multiplayer": false,
+      "comment": "Прикольная выживалка в постапокалипсисе"
+    },
+    {
+      "id": 5,
+      "title": "GTA 5",
+      "developer": "Rockstar Games",
+      "status": "Done",
+      "multiplayer": true
+    },
+    {
+      "id": 6,
+      "title": "Dark And Darker",
+      "status": "New"
+    }
+  ]
 }
