@@ -5,3 +5,8 @@ export {
   type Game,
   gamesListSchema
 } from './Game.schema';
+
+export {
+  paginatedGamesSchema,
+  type PaginatedGames
+} from './PaginatedGames.schema';

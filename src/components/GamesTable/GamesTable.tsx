@@ -1,12 +1,11 @@
 import './GamesTable.scss';
-import type { Game } from "@/types";
-import type { FC } from "react";
+import { gameStore } from '@/stores';
+import { observer } from 'mobx-react-lite';
+import { GameTableRow } from './GamesTableRow';
 
-type GamesTableProps = {
-  games: Game[]
-}
+export const GamesTable = observer(() => {
+  const games = gameStore.games;
 
-export const GamesTable: FC<GamesTableProps> = ({ games }) => {
   return (
     <table className="games-table">
       <thead className="games-table__header">
@@ -22,21 +21,10 @@ export const GamesTable: FC<GamesTableProps> = ({ games }) => {
         </tr>
       </thead>
       <tbody className="games-table__body">
-        {games?.map((game) => (
-          <tr key={game.id} className="games-table__row games-table__row--data">
-            <td className="games-table__cell">{game.status}</td>
-            <td className="games-table__cell">{game.title}</td>
-            <td className="games-table__cell">{game.genre}</td>
-            <td className="games-table__cell">{game.year}</td>
-            <td className="games-table__cell">
-              {game.multiplayer === undefined ? '' : game.multiplayer ? 'Есть' : 'Нет'}
-            </td>
-            <td className="games-table__cell">{game.platform}</td>
-            <td className="games-table__cell">{game.developer}</td>
-            <td className="games-table__cell">{game.publisher}</td>
-          </tr>
+        {games.map((game) => (
+          <GameTableRow key={game.id} game={game} />
         ))}
       </tbody>
     </table>
-  )
-}
+  );
+});

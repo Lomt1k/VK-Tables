@@ -1,1 +1,1 @@
-export { useGames } from './useGames';
+export { useInfiniteGames } from './useInfiniteGames';
