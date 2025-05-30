@@ -3,14 +3,14 @@
   border-collapse: separate;
   border-spacing: 0 10px;
   font-family: var(--ff-main);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px var(--color-black-10);
   background-color: var(--color-white);
   overflow: hidden;
   border-radius: 12px;
   text-align: left;
 
   &__header {
-    background-color: #2c3e50;
+    background-color: var(--color-madison);
   }
 
   &__row {
@@ -19,15 +19,15 @@
 
     &:hover:not(&--header) {
       transform: scale(1.01);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 10px var(--color-black-10);
     }
   }
 
   &__cell {
     padding: 14px 20px;
-    color: #333;
+    color: var(--color-black);
     font-size: 14px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-gainsboro);
 
     &--header {
       color: var(--color-white);
@@ -40,13 +40,13 @@
   &__row--data {
     &:nth-child(even) {
       .games-table__cell {
-        background-color: #ecf0f1;
+        background-color: var(--color-azure);
       }
     }
 
     &:nth-child(odd) {
       .games-table__cell {
-        background-color: #f7fbfc;
+        background-color: var(--color-azure-second);
       }
     }
   }

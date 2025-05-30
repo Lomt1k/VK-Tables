@@ -1,6 +1,6 @@
 import './Games.scss';
 import { useInfiniteGames } from '@/hooks';
-import { Container, GamesTable, InfiniteScrollLoader } from '@/components';
+import { Button, Container, GamesTable, InfiniteScrollLoader } from '@/components';
 
 export const Games = () => {
   const {
@@ -16,19 +16,26 @@ export const Games = () => {
     fetchNextPage();
   };
 
-  if (isLoading) return <div>Загрузка...</div>;
-  if (isError) return <div>Ошибка загрузки данных</div>;
-
   return (
     <section className="games">
       <Container>
-        <h2 className="games__heading">Список игр</h2>
-        <GamesTable />
-        <InfiniteScrollLoader
-          onLoadMore={handleLoadMore}
-          hasMore={!!hasNextPage}
-          isLoading={isFetchingNextPage}
-        />
+        <div className="games__top">
+          <h2 className="games__heading">Список игр</h2>
+          <Button>Добавить игру</Button>
+        </div>
+        {isLoading ? <div>Загрузка...</div>
+          : isError ? <div>Ошибка загрузки данных</div>
+            : (
+              <>
+                <GamesTable />
+                <InfiniteScrollLoader
+                  onLoadMore={handleLoadMore}
+                  hasMore={!!hasNextPage}
+                  isLoading={isFetchingNextPage}
+                />
+              </>
+            )
+        }
       </Container>
     </section>
   );

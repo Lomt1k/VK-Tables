@@ -1,0 +1,22 @@
+.button {
+  padding: 10px 20px;
+  font-family: var(--ff-main);
+  background-color: var(--color-madison);
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color var(--transition-300);
+
+  &:disabled {
+    background-color: var(--color-grey);
+  }
+
+  &:hover:not(:disabled),
+  &:focus-visible {
+    background-color: var(--color-navy-blue); 
+  }
+}
