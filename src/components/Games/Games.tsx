@@ -1,6 +1,11 @@
 import './Games.scss';
 import { useInfiniteGames } from '@/hooks';
-import { Button, Container, GamesTable, InfiniteScrollLoader } from '@/components';
+import {
+  AddNewGameButton,
+  Container,
+  GamesTable,
+  InfiniteScrollLoader
+} from '@/components';
 
 export const Games = () => {
   const {
@@ -21,7 +26,10 @@ export const Games = () => {
       <Container>
         <div className="games__top">
           <h2 className="games__heading">Список игр</h2>
-          <Button>Добавить игру</Button>
+          <div className="games__top-buttons">
+            <AddNewGameButton />
+            <AddNewGameButton shortForm />
+          </div>
         </div>
         {isLoading ? <div>Загрузка...</div>
           : isError ? <div>Ошибка загрузки данных</div>

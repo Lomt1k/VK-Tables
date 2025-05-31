@@ -15,7 +15,8 @@
     padding: 20px;
     border-radius: 20px;
     background-color: var(--color-white);
-    min-width: 400px;
+    min-width: 360px;
+    max-width: calc(100% - 40px);
   }
 
   &__close {

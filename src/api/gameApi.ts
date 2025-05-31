@@ -1,5 +1,11 @@
 import { apiClient } from '.';
-import { paginatedGamesSchema, type PaginatedGames } from '@/types';
+import {
+  gameSchema,
+  paginatedGamesSchema,
+  type Game,
+  type GameFormValues,
+  type PaginatedGames
+} from '@/types';
 
 export const fetchGames = async (pageParam = 1): Promise<PaginatedGames> => {
   try {
@@ -10,3 +16,13 @@ export const fetchGames = async (pageParam = 1): Promise<PaginatedGames> => {
     throw error;
   }
 };
+
+export const fetchAddGame = async (data: GameFormValues): Promise<Game> => {
+  try {
+    const response = await apiClient.post('/games', data);
+    return gameSchema.parse(response.data);
+  } catch (error) {
+    console.error('Ошибка при добавлении новой игры', error);
+    throw error;
+  }
+}

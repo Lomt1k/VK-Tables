@@ -1,0 +1,14 @@
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__input {
+    transform: scale(1.2);
+  }
+}

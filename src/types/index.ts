@@ -1,4 +1,4 @@
-export { 
+export {
   gameStatusSchema,
   type GameStatus,
   gameSchema,
@@ -10,3 +10,16 @@ export {
   paginatedGamesSchema,
   type PaginatedGames
 } from './PaginatedGames.schema';
+
+export {
+  type FormField,
+  type GameFormField,
+  type DynamicFormFieldsProps
+} from './Form.types';
+
+export {
+  gameBaseSchema,
+  optionalGameFields,
+  gameFormSchema,
+  type GameFormValues
+} from './GameForm.types'

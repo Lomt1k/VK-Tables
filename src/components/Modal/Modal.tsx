@@ -1,6 +1,6 @@
 import './Modal.scss';
 import { createPortal } from 'react-dom';
-import type { FC, ReactNode } from "react";
+import type { FC, MouseEventHandler, ReactNode } from "react";
 
 type ModalProps = {
   children: ReactNode,
@@ -8,8 +8,13 @@ type ModalProps = {
 }
 
 export const Modal: FC<ModalProps> = ({ children, onClickClose }) => {
+  const hadleBackgroundClick: MouseEventHandler<HTMLDivElement> = (e) => {
+    if (e.target !== e.currentTarget) return;
+    if (onClickClose) onClickClose();
+  }
+  
   return createPortal((
-    <div className="modal" onClick={onClickClose}>
+    <div className="modal" onClick={hadleBackgroundClick}>
       <div className="modal__content">
         {children}
         <button

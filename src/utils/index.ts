@@ -1,0 +1,1 @@
+export { allGameFields, minimalGameFields } from './formFieldsConfig';

@@ -4,14 +4,14 @@ import './Button.scss';
 type ButtonProps = {
   children: ReactNode,
   onClick?: () => void,
-  sumbit?: boolean,
+  submit?: boolean,
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: FC<ButtonProps> = ({ children, onClick, sumbit, ...rest }) => {
+export const Button: FC<ButtonProps> = ({ children, onClick, submit, ...rest }) => {
   return (
     <button
       className="button"
-      type={sumbit === true ? 'submit' : 'button'}
+      type={submit === true ? 'submit' : 'button'}
       onClick={onClick}
       {...rest}
     >

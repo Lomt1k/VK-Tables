@@ -1,0 +1,14 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__input {
+    font-family: var(--ff-main);
+  }
+}

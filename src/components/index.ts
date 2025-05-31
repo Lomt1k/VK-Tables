@@ -4,3 +4,6 @@ export { Modal } from './Modal';
 export { Games } from './Games';
 export { GamesTable } from './GamesTable';
 export { InfiniteScrollLoader } from './InfiniteScrollLoader';
+export { AddNewGameButton } from './AddNewGameButton';
+export { AddGameModal } from './AddGameModal';
+export { DynamicFormFields } from './DynamicFormFields';
