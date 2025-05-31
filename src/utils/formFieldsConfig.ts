@@ -1,4 +1,5 @@
 import type { FormField, GameFormValues } from '@/types';
+import { getLocalizedStatus } from '.';
 
 export const allGameFields: FormField<GameFormValues>[] = [
   {
@@ -41,9 +42,9 @@ export const allGameFields: FormField<GameFormValues>[] = [
     label: 'Статус',
     type: 'select',
     options: [
-      { value: 'New', label: 'Новая' },
-      { value: 'InProgress', label: 'В процессе' },
-      { value: 'Done', label: 'Завершена' },
+      { value: 'New', label: getLocalizedStatus('New') },
+      { value: 'InProgress', label: getLocalizedStatus('InProgress') },
+      { value: 'Done', label: getLocalizedStatus('Done') },
     ],
   },
 ];
