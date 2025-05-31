@@ -26,3 +26,13 @@ export const fetchAddGame = async (data: GameFormValues): Promise<Game> => {
     throw error;
   }
 }
+
+export const fetchEditGame = async (id: string, data: GameFormValues): Promise<Game> => {
+  try {
+    const response = await apiClient.patch(`/games/${id}`, data);
+    return gameSchema.parse(response.data);
+  } catch (error) {
+    console.error('Ошибка при редактировании игры', error);
+    throw error;
+  }
+}

@@ -18,6 +18,7 @@ export const GamesTable = observer(() => {
           <th className="games-table__cell games-table__cell--header">Платформа</th>
           <th className="games-table__cell games-table__cell--header">Разработчик</th>
           <th className="games-table__cell games-table__cell--header">Издатель</th>
+          <th className="games-table__cell games-table__cell--header">Действия</th>
         </tr>
       </thead>
       <tbody className="games-table__body">

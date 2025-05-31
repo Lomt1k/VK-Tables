@@ -1,2 +1,6 @@
 export { apiClient } from './apiClient';
-export { fetchGames } from './gameApi';
+export {
+  fetchGames,
+  fetchAddGame,
+  fetchEditGame
+} from './gameApi';

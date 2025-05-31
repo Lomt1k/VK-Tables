@@ -3,8 +3,6 @@ import { makeAutoObservable } from 'mobx';
 
 export class GameStore {
   games: Game[] = [];
-  isLoading: boolean = false;
-  error: string | null = null;
 
   constructor() {
     makeAutoObservable(this);
@@ -31,13 +29,5 @@ export class GameStore {
 
   removeGame(id: string) {
     this.games = this.games.filter((game) => game.id !== id);
-  }
-
-  setLoading(loading: boolean) {
-    this.isLoading = loading;
-  }
-
-  setError(error: string | null) {
-    this.error = error;
   }
 }

@@ -1,11 +1,15 @@
 import type { Game } from "@/types";
-import { type FC, memo } from "react";
+import { AddGameModal, Button } from "@/components";
+import { type FC, memo, useState } from "react";
+import { allGameFields } from "@/utils";
 
 type GamesTableRowProps = {
   game: Game
 }
 
 export const GameTableRow: FC<GamesTableRowProps> = memo(({ game }) => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
   return (
     <tr className="games-table__row games-table__row--data">
       <td className="games-table__cell">{game.status}</td>
@@ -18,6 +22,18 @@ export const GameTableRow: FC<GamesTableRowProps> = memo(({ game }) => {
       <td className="games-table__cell">{game.platform}</td>
       <td className="games-table__cell">{game.developer}</td>
       <td className="games-table__cell">{game.publisher}</td>
+      <td className="games-table__cell">
+        <Button small onClick={() => setShowModal(true)}>
+          Изменить
+        </Button>
+        {showModal &&
+          <AddGameModal
+            formFields={allGameFields}
+            onClose={() => setShowModal(false)}
+            editGame={game}
+          />
+        }
+      </td>
     </tr>
   )
 });
