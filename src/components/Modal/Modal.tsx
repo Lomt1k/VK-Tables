@@ -21,6 +21,7 @@ export const Modal: FC<ModalProps> = ({ children, onClickClose }) => {
           className="modal__close"
           type='button'
           onClick={onClickClose}
+          data-testid="modal-close"
         />
       </div>
     </div>

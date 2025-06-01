@@ -13,7 +13,6 @@ export {
 
 export {
   type FormField,
-  type GameFormField,
   type DynamicFormFieldsProps
 } from './Form.types';
 
