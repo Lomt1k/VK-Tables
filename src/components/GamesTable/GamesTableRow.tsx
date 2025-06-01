@@ -23,8 +23,11 @@ export const GameTableRow: FC<GamesTableRowProps> = memo(({ game }) => {
       <td className="games-table__cell">{game.developer}</td>
       <td className="games-table__cell">{game.publisher}</td>
       <td className="games-table__cell">
-        <Button small onClick={() => setShowModal(true)}>
-          Изменить
+        <Button small
+          className="games-table__edit-btn"
+          onClick={() => setShowModal(true)}
+        >
+          ✏️
         </Button>
         {showModal &&
           <AddGameModal

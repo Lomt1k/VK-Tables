@@ -1,14 +1,25 @@
 .add-game-modal {
+
   &__heading {
     margin: 0 0 20px;
     font-size: 20px;
     line-height: 24px;
+
+    @include vp-767 {
+      text-align: center;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include vp-767 {
+      max-width: 350px;
+      width: calc(100vw - 40px);
+      margin: 0 auto;
+    }
   }
 
   &__actions {
