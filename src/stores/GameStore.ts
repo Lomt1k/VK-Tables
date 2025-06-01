@@ -12,13 +12,13 @@ export class GameStore {
     this.games = games;
   }
 
-  addGame(game: Game) {
-    this.games.push(game);
-  }
-
   addGames(newGames: Game[]) {
     this.games = [...this.games, ...newGames];
   }
+
+  addCreatedGame(game: Game) {
+    this.games.unshift(game);
+  }  
 
   updateGame(id: string, updatedGame: Partial<Game>) {
     const index = this.games.findIndex((game) => game.id === id);

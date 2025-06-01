@@ -32,7 +32,7 @@ export const AddGameModal: FC<AddGameModalProps> = observer(({ onClose, formFiel
   const createGameMutation = useMutation({
     mutationFn: fetchAddGame,
     onSuccess: (savedGame) => {
-      gameStore.addGame(savedGame);
+      gameStore.addCreatedGame(savedGame);
       onClose();
     },
     onError: alert

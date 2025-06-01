@@ -10,6 +10,7 @@ export type GameStatus = z.infer<typeof gameStatusSchema>;
 
 export const gameSchema = z.object({
   id: z.string(),
+  createdAt: z.string().datetime(),
   title: z.string(),
   status: gameStatusSchema,
   year: z.number().optional(),

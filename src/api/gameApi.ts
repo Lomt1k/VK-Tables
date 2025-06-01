@@ -9,7 +9,7 @@ import {
 
 export const fetchGames = async (pageParam = 1): Promise<PaginatedGames> => {
   try {
-    const response = await apiClient.get(`/games?_page=${pageParam}`);
+    const response = await apiClient.get(`/games?_page=${pageParam}&_per_page=20&_sort=-createdAt`);
     return paginatedGamesSchema.parse(response.data);
   } catch (error) {
     console.error('Ошибка при загрузке игр:', error);
@@ -19,7 +19,8 @@ export const fetchGames = async (pageParam = 1): Promise<PaginatedGames> => {
 
 export const fetchAddGame = async (data: GameFormValues): Promise<Game> => {
   try {
-    const response = await apiClient.post('/games', data);
+    // На реальном проекте createdAt должен проставляться со стороны сервера
+    const response = await apiClient.post('/games', { ...data, createdAt: new Date().toISOString() });
     return gameSchema.parse(response.data);
   } catch (error) {
     console.error('Ошибка при добавлении новой игры', error);
